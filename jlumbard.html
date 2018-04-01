@@ -19,7 +19,21 @@
 	<img class = "swing-in-top-fwd" id="headshot" src="https://i.imgur.com/pnJN52l.jpg" />
 	
 	
-			<p id = "bio" class = "text-focus-in">I'm Brock Lumbard, a <span class ="moreInfo" id="degree" onmouseover = "changeBackground('red')" onmouseout = "changeBackground('#efecd2')">Software Engineering and Business Student</span> from the <span class ="moreInfo" id="school" onmouseover = "changeBackground('purple')" onmouseout = "changeBackground('#efecd2')">University of Western Ontario.</span> Originally from Regina, Saskatchewan, I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
+	
+	
+			<p id = "bio" class = "text-focus-in">I'm Brock Lumbard, a 
+			
+			<span class ="moreInfo" id="degree" onmouseover = "changeBackground('red'); popupImage('inBetweenPic1');" onmouseout = "changeBackground('#efecd2'); goAwayImage('inBetweenPic1');">Software Engineering and Business Student</span>
+			
+			<span id="inBetweenPic"><img class = "popupImage" id = "inBetweenPic1"src ="c:/Users/Brock/Downloads/IMG_6943.jpg"/></span>
+			
+			from the <span class ="moreInfo" id="school" onmouseover = "changeBackground('purple')" onmouseout = "changeBackground('#efecd2')">University of Western Ontario.</span>
+			
+			Originally from Regina, Saskatchewan, I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
+			
+			
+			
+			
 			<!-- <td id = "bioDetails">Details about me </td> -->
 		
 	<!-- <div id="popupDegree"><img class = "popupImage" src ="c:/Users/Brock/Downloads/IMG_6943.jpg"/> <br>I chose the Ivey/Engineering dual degree and moved to London in 2016 to get a taste of both disciplines. </div> -->
@@ -56,6 +70,8 @@ transition: background-color .7s;
 .popupImage{
 	width: 40%;
 	text-align: center;
+	margin: auto;
+	display: none;
 }
 #bio{
 display: block;
@@ -508,10 +524,15 @@ h1{
 <script>
 function changeBackground(color){
 document.getElementById("wholeHTML").style.backgroundColor = color;
-
+}
+function popupImage(idToFind){
+document.getElementById(idToFind).style.display = 'block';
+}
+function goAwayImage(idToFind){
+document.getElementById(idToFind).style.display = 'none';
 }
 function swingIn(){
-document.getElementById("headshot").display = block;
-console.log("hey");s
+document.getElementById("headshot").display = 'block';
+console.log("hey");
 }
 </script>
