@@ -13,23 +13,43 @@
 
 <body>
 	
-	<h1 class = "nameTitle text-flicker-in-glow" >
+	<!-- <h1 class = "nameTitle text-flicker-in-glow" >
 	<span onmouseover = "swingIn()" class = "allName " id = "name1">B</span><span class = "allName" id = "name2">r</span><span class = "allName" id = "name3">o</span><span class = "allName" id = "name4">c</span><span class = "allName" id = "name5">k   </span><span class = "allName" id = "name6">L</span><span class = "allName" id = "name7">u</span><span class = "allName" id = "name8">m</span><span class = "allName" id = "name9">b</span><span class = "allName" id = "name10">a</span><span class = "allName" id = "name11">r</span><span class = "allName" id = "name12">d</span><span class = "allName"s id = "name13"></span>
-	</h1>
-	<img class = "swing-in-top-fwd" id="headshot" src="https://i.imgur.com/pnJN52l.jpg" />
+	</h1> -->
 	
-	
-	
-	
-			<p id = "bio" class = "text-focus-in">I'm Brock Lumbard, a 
+			<p id = "bio" class = "text-focus-in">I'm 
+
+			<span class = "moreInfo" onmouseover="modifyPop('inBetweenPic0','blue','30%')" onmouseout = "unModifyPop('inBetweenPic0')" >Brock Lumbard,<br></span>
+
+			<span class = "inBetweenPic " ><img class = "popupImage" id="inBetweenPic0" src ="IMG_6943.jpg"/>
+
+			<span class ="interiorSpan" >Here's me looking all professional. Note this website is a work in progress. </span></span>
+
+			a 
 			
-			<span class ="moreInfo" id="degree" onmouseover = "changeBackground('red'); popupImage('inBetweenPic1');" onmouseout = "changeBackground('#efecd2'); goAwayImage('inBetweenPic1');">Software Engineering and Business Student</span>
+			<span class ="moreInfo" id="degree" onmouseover = "modifyPop('inBetweenPic1','rgb(255,179,186)','45%')" onmouseout = "unModifyPop('inBetweenPic1')">Software Engineering and Business Student<br></span>
 			
-			<span id="inBetweenPic"><img class = "popupImage" id = "inBetweenPic1"src ="IMG_6943.jpg"/></span>
+			<span class = "inBetweenPic " ><img class = "popupImage" id="inBetweenPic1" src ="IMG_962.jpg"/>
+
+			<span class ="interiorSpan" >I chose the Ivey/Engineering dual degree and moved to London in 2016 to get a taste of both disciplines. Above is a picture of my team following the Hult Prize Competition in late 2017.</span></span>
 			
-			from the <span class ="moreInfo" id="school" onmouseover = "changeBackground('purple')" onmouseout = "changeBackground('#efecd2')">University of Western Ontario.</span>
+			from the 
+
+			<span class ="moreInfo" onmouseover = "modifyPop('inBetweenPic2','purple','45%')" onmouseout = "unModifyPop('inBetweenPic2')">University of Western Ontario.<br></span>
+
+			<span class = "inBetweenPic " ><img class = "popupImage" id="inBetweenPic2" src ="IMG_96.jpg"/>
+
+			<span class ="interiorSpan" >Western has treated me well. Here's a picture of me showing my school spirit with a bunch of people I don't know.</span></span>
 			
-			Originally from Regina, Saskatchewan, I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
+			Originally from 
+
+			<span class ="moreInfo" onmouseover = "modifyPop('inBetweenPic3','rgb(186,255,255)','45%')" onmouseout = "unModifyPop('inBetweenPic3')">Regina,Saskatchewan,<br></span>
+
+			<span class = "inBetweenPic " ><img class = "popupImage" id="inBetweenPic3" src ="Brock_2033.jpg"/>
+
+			<span class ="interiorSpan" >Here's a picture of me in downtown Regina. I'm proud of my prarie upbringing, and it impacts my passion and ideas. </span></span>
+
+ I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
 			
 			
 			
@@ -46,8 +66,8 @@
 
 
 html{
-background-color: #efecd2;
-transition: background-color .7s;
+	background-color: #efecd2;
+	transition: background-color .7s;
 }
 #popupDegree{
 	visibility: hidden;
@@ -57,8 +77,21 @@ transition: background-color .7s;
 	position: relative;
 	top: -4em;
 }
-#headshot{
+.inBetweenPic{
+	background-color: rgb(204,204,204,0.3);
+	margin: 0.5em;
+	width: 0%;
+	height: 0%;
+	transition: width 1s;
+	font-size: 0.5em;
+	line-height: 100%;
+	display: none;
+}
+#inBetweenPic1{
+	display: none;
+}
 
+#headshot{
 	padding: 0.5em;
 	padding-top: 3em;
 	display: none;
@@ -67,29 +100,33 @@ transition: background-color .7s;
 	top: 130px;
 	margin: auto;
 }
+.interiorSpan{
+	display: block;
+	padding-bottom: 2em;
+}
 .popupImage{
-	width: 40%;
+	width: 0%;
 	text-align: center;
 	margin: auto;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	display: none;
+	border-radius: 5px;
 }
 #bio{
-display: block;
-position: absolute;
-Font-Family: 'Roboto Mono', monospace;
-width: 80%;
-font-size: 3em;
-text-align: left;
-padding-top: 2em;
-padding-left: 2em;
-padding-right: 2em;
+	display: block;
+	position: absolute;
+	Font-Family: 'Roboto Mono', monospace;
+	width: 80%;
+	font-size: 3em;
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
 
 }
-
 span:hover{
-opacity: 1;
+	opacity: 1;
 }
-
 #bioDetails{
 	visibility: hidden; 
 	width: 0%;
@@ -97,23 +134,14 @@ opacity: 1;
 }
 .moreInfo{
 	text-decoration: underline;
+	margin: auto;
 	
 }
-
-
 h1{
 	display: block;
 	font-size: 3em;
 	text-align: center;
 	Font-Family: 'Roboto Mono', monospace;
-}
-.slide-in-bck-top {
-	-webkit-animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.swing-in-top-fwd {
-	-webkit-animation: swing-in-top-fwd 1.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-	        animation: swing-in-top-fwd 1.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 .nameTitle{
 	position: absolute;
@@ -124,10 +152,25 @@ h1{
 }
 .allName{
 	position: relative;
-	
 	font-weight: normal;
 	bottom: 1em;
 }
+
+
+<!--Now just the animista ones-->
+.slide-in-bck-top {
+	-webkit-animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.swing-in-top-fwd {
+	-webkit-animation: swing-in-top-fwd 1.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-top-fwd 1.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+.puff-in-center {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
 .text-flicker-in-glow {
 	-webkit-animation: text-flicker-in-glow 4s linear both;
 	        animation: text-flicker-in-glow 4s linear both;
@@ -516,20 +559,88 @@ h1{
     opacity: 1;
   }
 }
+/* ----------------------------------------------
+ * Generated by Animista on 2018-4-1 12:54:34
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 
 
 
 
 </style>
 <script>
+
+
+function modifyPop(id1,color,percent){
+	changeBackground(color);
+	popupImage(id1,percent);
+}
+function unModifyPop(id1){
+	changeBackground('#efecd2'); 
+	goAwayImage(id1);
+}
+
 function changeBackground(color){
 document.getElementById("wholeHTML").style.backgroundColor = color;
 }
-function popupImage(idToFind){
-document.getElementById(idToFind).style.display = 'block';
+function popupImage(idToFind, percent){
+el = document.getElementById(idToFind);
+el.style.width = percent;
+el.style.height = percent;
+el.style.display = 'block';
+el2 = el.parentNode;
+el2.style.width = '100%';
+el2.style.height = '100%';
+el2.style.display = 'block';
 }
 function goAwayImage(idToFind){
-document.getElementById(idToFind).style.display = 'none';
+el = document.getElementById(idToFind);
+el.style.width = '0%';
+el.style.height = '0%';
+el.style.display = 'none';
+el2 = el.parentNode;
+el2.style.width = '0%';
+el2.style.height = '0%';
+el2.style.display = 'none';
 }
 function swingIn(){
 document.getElementById("headshot").display = 'block';
