@@ -52,7 +52,7 @@
 
 			<span class ="interiorSpan" >Here's a picture of me in downtown Regina. I'm proud of my prairie upbringing, and it impacts my passion and ideas. </span></span></span>
 
- I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
+	I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
 			
 			
 			
@@ -127,6 +127,12 @@ body{
 .overlapID{
 	padding-bottom: 1.5em;
 }
+.overlapID:hover .inBetweenPic{
+	display: block;
+	-webkit-animation: fadeIn1 1s;
+	animation: fadeIn1 1s;
+
+}
 #popupDegree{
 	visibility: hidden;
 	text-align: center;
@@ -140,12 +146,24 @@ body{
 	margin: 0.5em;
 	width: 0%;
 	height: 0%;
-	transition: width 1s, height 1s, display 1s;
+	opacity: 0;
+	-webkit-transition: width 1s, height 1s,opacity 1s;
+	transition: width 1s, height 1s,opacity 1s;
 	font-size: 0.5em;
 	line-height: 100%;
-	display: none;
+	display:none;
 }
-
+.popupImage{
+	width: 0%;
+	text-align: center;
+	margin: auto;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	display: block;
+	border-radius: 5px;
+	-webkit-transition: width 1s, height 1s,opacity 1s;
+	transition: width 1s, height 1s,opacity 1s;
+}
 
 #headshot{
 	padding: 0.5em;
@@ -160,16 +178,7 @@ body{
 	display: block;
 	padding-bottom: 2em;
 }
-.popupImage{
-	width: 0%;
-	text-align: center;
-	margin: auto;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	display: none;
-	border-radius: 5px;
-	transition: display 1s;
-}
+
 #bio{
 	display: block;
 	position: relative;
@@ -345,6 +354,19 @@ section #services li span {
 <!-- animation: example; -->
 <!-- animation-duration: 1s; -->
 <!-- } -->
+
+@-webkit-keyframes fadeIn1 {
+    from { opacity: 0;
+			width: 0%;}
+      to { opacity: 1;
+			width: 100%; }
+}  
+@keyframes fadeIn1 {
+    from { opacity: 0;
+			width: 0%; }
+      to { opacity: 1;
+			width: 100%; }
+}
 
 @-webkit-keyframes text-flicker-in-glow {
   0% {
@@ -737,23 +759,25 @@ document.getElementById("wholeHTML").style.backgroundColor = color;
 }
 function popupImage(idToFind, percent){
 el = document.getElementById(idToFind);
+
+
 el.style.width = percent;
 el.style.height = percent;
-el.style.display = 'block';
 el2 = el.parentNode;
 el2.style.width = '100%';
 el2.style.height = '100%';
-el2.style.display = 'block';
+el2.style.opacity = '1';
 }
 function goAwayImage(idToFind){
 el = document.getElementById(idToFind);
 el.style.width = '0%';
 el.style.height = '0%';
-el.style.display = 'none';
 el2 = el.parentNode;
 el2.style.width = '0%';
 el2.style.height = '0%';
-el2.style.display = 'none';
+el2.style.opacity = '0';
+
+
 }
 function swingIn(){
 document.getElementById("headshot").display = 'block';
