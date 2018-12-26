@@ -1,0 +1,441 @@
+<html>
+	<head>
+		<link rel=icon href="favicon.png">
+	<head>
+
+
+	<body >
+	
+		<div id="container" >
+		<p class="headings" id="menu" onclick="handleClick(this)">menu</p>
+		<div id="menulessContainer" class="css-typing">
+		<p class="headings" id="name" onclick="handleClick(this)">Brock Lumbard</p>
+		<p class="headings" id="code" onclick="handleClick(this)">Code</p>
+		<p class="headings" id="data" onclick="handleClick(this)">Data</p>
+		<p class="headings" id="entr" onclick="handleClick(this)">Entrepreneurship</p>
+		<p class="headings" id="comm" onclick="handleClick(this)">Communication</p>
+		<p class="headings" id="char" onclick="handleClick(this)">Character</p>
+		<p class="headings" id="back" onclick="handleClick(this)">Background</p> 
+		<p class="headings" id="clic" onclick="handleClick(this)">Click One!</p>
+		
+		<p class="headings2" id="name" onclick="handleClick(this)">Brock Lumbard</p>
+		<p class="headings2" id="code" onclick="handleClick(this)">Code</p>
+		<p class="headings2" id="data" onclick="handleClick(this)">Data</p>
+		<p class="headings2" id="entr" onclick="handleClick(this)">Entrepreneurship</p>
+		<p class="headings2" id="comm" onclick="handleClick(this)">Communication</p>
+		<p class="headings2" id="char" onclick="handleClick(this)">Character</p>
+		<p class="headings2" id="back" onclick="handleClick(this)">Background</p> 
+		</div>
+		</div>
+		
+		<div id="contentContainer" class="css-typing">
+			<div class="content" id="nameContent" onclick="handleClick(this)">
+				<p id="nameContent1">This is me.</p>
+				<p id="nameContent2">I'm a Software Engineering and Business Student,</p>
+				<p id="nameContent3">currently studying at the Ivey Business School.</p>
+			</div>
+		<p class="content" id="codeContent" onclick="handleClick(this)">Code</p>
+		<p class="content" id="dataContent" onclick="handleClick(this)">Data</p>
+		<p class="content" id="entrContent" onclick="handleClick(this)">Entrepreneurship</p>
+		<p class="content" id="commContent" onclick="handleClick(this)">Communication</p>
+		<p class="content" id="charContent" onclick="handleClick(this)">Character</p>
+		<p class="content" id="backContent" onclick="handleClick(this)">Background</p> 
+		<p class="content" id="clicContent" onclick="handleClick(this)">Click One!</p>
+		</div>
+		
+		<!-- 
+		Each one has a corresponding Image that fills the page. Text Types out animation on the non-subject area of the image 
+		Images:
+		
+		Intro: Need new solo pic 
+		Code - on stage at HW4
+		Data - Need new. SOmething from first educational? Founders Picture?
+		Entrepreneurship - Something from  W5 Accelerator?
+		Communication - Pitching on stage at Hult Prize
+		Character - NEW. Or pic from  swimability?
+		Background - BCG picture? Pic w Dr. Anderson?
+		
+		Menu Format? 
+		Spell out all of them then make some "click me" text with a shiny animation or a cursor blinking at the end.
+		
+		-->
+	</body>
+</html>
+
+<style>
+
+
+
+.headings{
+}
+
+.headings2{
+	display: none;
+	border-right-color: transparent !important;
+}
+
+#menu{
+	display: none;
+	font-weight: normal;
+	font-family: "Courier";
+	border-right-color: transparent;
+	color: grey;
+	margin: auto;
+	text-align: center;
+}
+
+body{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	background-image: url('one.png');
+	background-size: cover;
+	background-position: center; 
+	background-repeat: no-repeat;
+	transition: background-image 1s ease-in-out;
+	font-family: "Courier";
+	font-size: 2em;
+}
+
+#menulessContainer{
+	transition: height 1s linear;
+}
+
+#container{
+	width: 9.8em;
+	text-align : left;
+	clear: both;
+	margin: auto;
+}
+
+#contentContainer{
+	text-align: center;
+	clear: both;
+}
+
+.content{
+	margin-right: auto;
+	margin-left: auto;
+	display: none;
+}
+#nameContent{
+	float: left;
+	margin-left: 15%;
+	font-size: 0.7em;
+	width: 100%;
+}
+
+
+/*The Below is typewriter affect*/ 
+.css-typing p {
+  border-right: .08em solid blue;
+  font-family: "Courier";
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.headings#name{
+  width: 7.8em;
+  -webkit-animation: type 1.5s steps(30, end);
+  animation: type 1.5s steps(30, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.headings#code{
+  width: 2.5em;
+  opacity: 0;
+  -webkit-animation: type2 0.5s steps(10, end);
+  animation: type2 0.5s steps(10, end);
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.headings#data{
+  width: 2.5em;
+  opacity: 0;
+  -webkit-animation: type2 0.5s steps(10, end);
+  animation: type2 0.5s steps(10, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.headings#entr{
+  width: 9.9em;
+  opacity: 0;
+  -webkit-animation: type2 1.5s steps(30, end);
+  animation: type2 1.5s steps(30, end);
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.headings#comm{
+  width: 7.8em;
+  opacity: 0;
+  -webkit-animation: type2 1.5s steps(25, end);
+  animation: type2 1.5s steps(25, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.headings#char{
+  width: 5.5em;
+  opacity: 0;
+  -webkit-animation: type2 1.1s steps(20, end);
+  animation: type2 1.1s steps(20, end);
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+.headings#back{
+  width: 6.1em;
+  opacity: 0;
+  -webkit-animation: type3 1.2s steps(20, end), blink .5s step-end 6 alternate, killBorder 0.01s linear 1;
+  animation: type3 1.2s steps(20, end), blink .5s step-end 6 alternate, killBorder 0.01s linear 1;
+  -webkit-animation-delay: 6.6s,8.0s, 11.3s;
+  animation-delay: 6.6s,8.0s, 11.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+.headings#clic{
+  width: 5.9em;
+  opacity: 0;
+  -webkit-animation: type3 1.2s steps(20, end), blink 0.5s step-end infinite alternate;
+  animation: type3 1.2s steps(20, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 11.6s;
+  animation-delay: 11.6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+#nameContent1{
+	width: 6.5em;
+	opacity: 0;
+	-webkit-animation: type2 1.1s steps(20, end);
+	animation: type2 1.1s steps(20, end);
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#nameContent2{
+	width: 28.7em;
+	opacity: 0;
+	-webkit-animation: type2 3.1s steps(60, end);
+	animation: type2 3.1s steps(60, end);
+	-webkit-animation-delay: 1.1s;
+	animation-delay: 1.1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#nameContent3{
+	width: 28.1em;
+	opacity: 0;
+  -webkit-animation: type3 3.2s steps(60, end), blink 0.5s step-end infinite alternate;
+  animation: type3 3.2s steps(60, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 4.3s;
+  animation-delay: 4.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .08em solid blue;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .08em solid blue;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .08em solid  blue;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .08em solid blue;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes killBorder{
+100%{
+	border-right-color: white;
+	}
+}
+@-webkit-keyframes killBorder{
+100%{
+	border-right-color: white;
+	}
+}
+</style>
+<script>
+
+async function handleClick(Caller){
+	
+	for ( let x of document.getElementsByClassName("headings")){
+		if(x.id !== "menu"){
+			x.style.display = "none";
+		}
+	}	
+	for ( let x of document.getElementsByClassName("headings2")){
+		if(x.id !== "menu"){
+			x.style.display = "none";
+		}
+	}
+	
+	if(Caller.id !== "menu"){
+		document.getElementById("menu").style.display = "block";
+		document.getElementsByTagName("body")[0].style.display = "block";
+	}
+	
+
+	switch(Caller.id){
+		case "name":
+			document.getElementById("nameContent").style.display = "block";
+		
+			console.log(document.getElementById("nameContent").style.display);
+			
+			if(document.getElementsByTagName("body")[0].style.backgroundImage.charAt(13) !== 'B'){
+			document.getElementsByTagName("body")[0].style.backgroundImage = "url(IMG_6945.jpg)";
+			await sleep(2000);
+			}
+			document.getElementsByTagName("body")[0].style.backgroundImage = "url(IMG_6945B.png)";
+		break;
+		
+		case "code":
+		
+		break;
+		
+		case "data":
+		
+		break;
+		
+		case "entr":
+		
+		break;
+		
+		case "comm":
+		
+		break;
+		
+		case "char":
+		
+		break;
+		
+		case "back":
+		
+		break;
+		
+		case "clic":
+		
+		break;
+		
+		case "menu":
+		
+		document.getElementById("container").style.textAlign = "left";
+		document.getElementsByTagName("body")[0].style.display = "flex";
+		
+			for ( let x of document.getElementsByClassName("headings2")){
+				if(x.id !== "menu"){
+				x.style.display = "block";
+				}
+			}
+			for ( let x of document.getElementsByClassName("content")){
+				if(x.id !== "menu"){
+				x.style.display = "none";
+				}
+			}
+		document.getElementById("menu").style.display = "none";
+		break;
+	}
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>

@@ -20,7 +20,7 @@
 	<span onmouseover = "swingIn()" class = "allName " id = "name1">B</span><span class = "allName" id = "name2">r</span><span class = "allName" id = "name3">o</span><span class = "allName" id = "name4">c</span><span class = "allName" id = "name5">k   </span><span class = "allName" id = "name6">L</span><span class = "allName" id = "name7">u</span><span class = "allName" id = "name8">m</span><span class = "allName" id = "name9">b</span><span class = "allName" id = "name10">a</span><span class = "allName" id = "name11">r</span><span class = "allName" id = "name12">d</span><span class = "allName"s id = "name13"></span>
 	</h1> -->
 	
-			<p id = "bio" class = "text-focus-in">I'm 
+			<p id = "bio" class = "text-focus-in">
 
 			<span class="overlapID" onmouseover="modifyPop('inBetweenPic0','blue','30%')" onmouseout = "unModifyPop('inBetweenPic0')"><span class = "moreInfo">Brock Lumbard,<br></span>
 
@@ -30,7 +30,7 @@
 
 			a 
 			
-			<span class="overlapID" onmouseover = "modifyPop('inBetweenPic1','rgb(255,179,186)','45%')" onmouseout = "unModifyPop('inBetweenPic1')"><span class ="moreInfo" id="degree" >Software Engineering and Business Student<br></span>
+			<span class="overlapID" onmouseover = "modifyPop('inBetweenPic1','rgb(255,179,186)','45%')" onmouseout = "unModifyPop('inBetweenPic1')"><span class ="moreInfo" id="degree" >Education<br></span>
 			
 			<span class = "inBetweenPic " ><img class = "popupImage" id="inBetweenPic1" src ="IMG_962.jpg"/>
 
@@ -52,14 +52,11 @@
 
 			<span class ="interiorSpan" >Here's a picture of me in downtown Regina. I'm proud of my prairie upbringing, and it impacts my passion and ideas. </span></span></span>
 
-	I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
-			
-			
-			
-			
+			I'm an aspiring innovator and entrepreneur, and I have a passion for the Canadian entrepreneurial environment. I've been writing code since the the 9th Grade, when I first picked up Python to webscrape. </p>
+									
 			<!-- <td id = "bioDetails">Details about me </td> -->
 		
-	<!-- <div id="popupDegree"><img class = "popupImage" src ="c:/Users/Brock/Downloads/IMG_6943.jpg"/> <br>I chose the Ivey/Engineering dual degree and moved to London in 2016 to get a taste of both disciplines. </div> -->
+			<!-- <div id="popupDegree"><img class = "popupImage" src ="c:/Users/Brock/Downloads/IMG_6943.jpg"/> <br>I chose the Ivey/Engineering dual degree and moved to London in 2016 to get a taste of both disciplines. </div> -->
 
 <div id="socMed">
 <section>
@@ -133,6 +130,11 @@ body{
 	animation: fadeIn1 1s;
 
 }
+
+<!-- span:hover span:not(:hover){ -->
+	<!-- filter: blur(5px); -->
+<!-- } -->
+
 #popupDegree{
 	visibility: hidden;
 	text-align: center;
@@ -371,6 +373,7 @@ section #services li span {
 @-webkit-keyframes text-flicker-in-glow {
   0% {
     opacity: 0;
+	
   }
   10% {
     opacity: 0;

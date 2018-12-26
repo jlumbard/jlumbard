@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Brock Lumbard </title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+	<!--these two from the social media links-->
+	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel=icon href="favicon.png">
+	<!-- #AD7A99 #B2CEDE #8CDFD6 #6DC0D5 #D7D0C8 --></head>
+<body>
+<div id = "headers">
+
+	<div class = "HeaderContainer" id ="nameHeader" onmouseover="blurOutAll(this); changeBackground('#AD7A99'); changeGrid(this)" onmouseoutt = "unBlurAll(this); changeBackground('#ffffff'); changeGridBack(this)">
+		<span class = "Header" id ="nameHeaderSpan">Brock Lumbard</span>
+		<span class = "name" id="nameBigText">Brock Lumbard</span>
+	</div>
+	
+	<div class = "HeaderContainer" id ="codeHeader" onmouseover="blurOutAll(this); changeBackground('#B2CEDE')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id ="codeHeaderSpan">Code</span>
+		<img class = "name" id="nameBigImage" src = "IMG_6945.jpg">
+	</div>
+	
+	<div class = "HeaderContainer" id = "dataHeader" onmouseover="blurOutAll(this); changeBackground('#8CDFD6')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id = "dataHeaderSpan">Data</span>
+		
+	</div>
+	
+	<div class = "HeaderContainer" id = "communicationHeader" onmouseover="blurOutAll(this); changeBackground('#6DC0D5')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id = "communicationHeaderSpan">Communication</span>
+		<span class = "name" id="nameIntroduction">I'm Brock, a Software Engineering and Business Student from the Ivey Business School. I am passionate about innovation, and have a background in data and analytics and full stack development.</span>
+	</div>
+	
+	<div class = "HeaderContainer" id = "entrepreneurshipHeader" onmouseover="blurOutAll(this); changeBackground('#D7D0C8')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id = "entrepreneurshipHeaderSpan">Entrepreneurship</span>
+		
+		<div id="socMed" class="name">
+			<section>
+			  <ul id="services">
+				<li>
+				  <div class="facebook">
+					<a href="https://www.facebook.com/blumbard">
+					  <i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Facebook</span>
+				</li>
+				<li>
+				  <div class="twitter">
+					<a href="https://twitter.com/b_lumbard">
+					  <i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Twitter</span>
+				</li>
+				<li>
+				  <div class="linkedin">
+					<a href="https://www.linkedin.com/in/brock-lumbard-8b120013a/">
+					  <i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>LinkedIn</span>
+				</li>
+				<li>
+				  <div class="instagram">
+					<a href="https://www.instagram.com/brocklumbard/">
+					  <i class="fa fa-instagram" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Instagram</span>
+				</li>
+				<li>
+				  <div class="github">
+					<a href="https://github.com/jlumbard">
+					  <i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Github</span>
+				</li>
+			  </ul>
+			</section>
+		</div>
+	</div>
+	
+	<div class = "HeaderContainer" id = "characterHeader" onmouseover="blurOutAll(this); changeBackground('#AD7A99')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id = "characterHeaderSpan">Character</span>
+	</div>
+	
+	<div class = "HeaderContainer" id = "backgroundHeader" onmouseover="blurOutAll(this); changeBackground('#AD7A99')"onmouseout = "unBlurAll(this); changeBackground('#ffffff')">
+		<span class = "Header" id = "backgroundHeaderSpan">Background</span>
+	</div>
+</div>
+	
+
+</body>
+</html>
+
+<style>	
+/* This is the Changeable styles. Stuff for each hover area.*/
+
+.name{
+	display: none;
+}
+#nameBigText{
+	font-size: 4em;
+	font-family: Open Sans;
+}
+#nameIntroduction{
+	font-size: 1.5em;
+	font-family: Open Sans;
+}
+#nameBigImage{
+	height: 80%;
+	width: 80%;
+}
+
+
+
+/* This is the setup for the grid and colors. Don't mess with this too much.*/
+
+#headers{
+	height:100%;
+	width: 100%;
+	text-align: center;
+	font-family: Arial;
+	font-size: 1em;
+	display: grid;
+	grid-gap: 0px;
+	grid-auto-columns: 1fr;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(3,1fr);
+	grid-template-areas:
+	'name name name'
+	'code data communication'
+	'entrepreneurship character background';
+}
+
+#nameHeader{grid-area:name;}
+#codeHeader{grid-area:code;}
+#dataHeader{grid-area:data;}
+#communicationHeader{grid-area:communication;}
+#entrepreneurshipHeader{grid-area:entrepreneurship;}
+#characterHeader{grid-area:character;}
+#backgroundHeader{grid-area:background;}
+
+div.HeaderContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body{
+	transition: background-color 2000ms linear;
+}
+html,body{ 
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+}
+
+/*Styles for the Social Media link*/
+section #services {
+  text-align: center;
+  transform: translatez(0);
+	display: hidden;
+}
+section #services h2 {
+  margin: 80px 0px 40px;
+  color: #fff;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+section #services li {
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+section #services li div {
+  width: 120px;
+  height: 120px;
+  color: rgb(0,0,0,0);
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px;
+  background-color: #000000;
+  transition: all 0.5s ease;
+}
+section #services li a {
+  color: #ffffff;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+section #services li span {
+  width: 120px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}
+.credits a {
+  display: block;
+  text-align: center;
+  color: #74d4b3;
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 50px;
+  background: white;
+  padding: 20px;
+  max-width: 300px;
+}
+</style>
+<script>
+function blurOutAll(Caller){
+	for (let x of document.getElementsByClassName("Header")){
+	if(x.id != Caller.id){
+		x.style.display = "none";
+		}
+	}
+};
+function unBlurAll(Caller){
+	for (let x of document.getElementsByClassName("Header")){
+	if(x.id != Caller.id){
+		x.style.display = "inline";
+		}
+	}
+};
+function changeBackground(color){
+	document.body.style.background = color;
+};
+function changeGrid(Caller){
+	//Reminder: if you plan on not using a cell in a grid setup you must set it to display none to get rid of it in the grid. 
+	//Should I mock all of these first?
+	//Case: name
+	if(Caller.id === "nameHeader"){
+		document.getElementById("headers").style.gridTemplateAreas='"name name name""code code communication""entrepreneurship entrepreneurship entrepreneurship"';
+		for ( let x of document.getElementsByClassName("name")){
+			x.style.display = "inline";
+		}
+		document.getElementById("dataHeader").style.display = "none";
+		document.getElementById("characterHeader").style.display = "none";
+		document.getElementById("backgroundHeader").style.display = "none";
+		document.getElementById("nameHeaderSpan").style.display = "none";//This cant be included in the above loop why?
+	}
+	//Case: Code
+	
+};
+function changeGridBack(Caller){
+	document.getElementById("headers").style.gridTemplateAreas='"name name name""code data communication""entrepreneurship character background"';
+	if(Caller.id === "nameHeader"){
+		for ( let x of document.getElementsByClassName("name")){
+			x.style.display = "none";
+		}
+		document.getElementById("dataHeader").style.display = "flex";
+		document.getElementById("characterHeader").style.display = "flex";
+		document.getElementById("backgroundHeader").style.display = "flex";
+		document.getElementById("nameHeaderSpan").style.display = "inline";
+	}
+}
+</script>
