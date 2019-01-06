@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link rel=icon href="favicon.png">
 	<head>
 
@@ -41,6 +43,53 @@
 		<p class="content" id="charContent" onclick="handleClick(this)">Character</p>
 		<p class="content" id="backContent" onclick="handleClick(this)">Background</p> 
 		<p class="content" id="clicContent" onclick="handleClick(this)">Click One!</p>
+		</div>
+		
+		<div id="socMed" >
+			<section>
+			  <ul id="services">
+				<li>
+				  <div class="facebook">
+					<a href="https://www.facebook.com/blumbard">
+					  <i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Facebook</span>
+				</li>
+				<li>
+				  <div class="twitter">
+					<a href="https://twitter.com/b_lumbard">
+					  <i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Twitter</span>
+				</li>
+				<li>
+				  <div class="linkedin">
+					<a href="https://www.linkedin.com/in/brock-lumbard-8b120013a/">
+					  <i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>LinkedIn</span>
+				</li>
+				<li>
+				  <div class="instagram">
+					<a href="https://www.instagram.com/brocklumbard/">
+					  <i class="fa fa-instagram" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Instagram</span>
+				</li>
+				<li>
+				  <div class="github">
+					<a href="https://github.com/jlumbard">
+					  <i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				  </div>
+				  <span>Github</span>
+				</li>
+			  </ul>
+			</section>
 		</div>
 		
 		<!-- 
@@ -123,7 +172,7 @@ body{
 }
 #nameContent{
 	float: left;
-	margin-left: 15%;
+	margin-left: 10%;
 	font-size: 0.7em;
 	width: 100%;
 }
@@ -249,6 +298,70 @@ body{
 
 }
 
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(IMG_6945.jpg) url(IMG_6945B.jpg);
+}
+
+/*Styles for the Social Media link*/
+/*play with position absolute float bottom for the socmed or section to force it to the bottom in the name tab.*/
+
+
+#socMed{
+	font-size: 0.5em;
+	line-height: 0.5em;
+	display: none;
+}
+
+section #services {
+  text-align: center;
+  transform: translatez(0);
+display: hidden;
+}
+section #services h2 {
+  margin: 80px 0px 40px;
+  color: #fff;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+section #services li {
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+section #services li div {
+  width: 120px;
+  height: 120px;
+  color: rgb(0,0,0,0);
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px !important;
+  background-color: #000000;
+  transition: all 0.5s ease;
+}
+section #services li a {
+  color: #ffffff;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+section #services li span {
+  width: 120px;
+  height: 20px;
+  display: none;
+  padding: 15px 0px;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}
+section #services i{
+	margin-top: 0.55em;
+}
 
 
 @keyframes type {
@@ -384,6 +497,7 @@ async function handleClick(Caller){
 			await sleep(2000);
 			}
 			document.getElementsByTagName("body")[0].style.backgroundImage = "url(IMG_6945B.png)";
+			document.getElementById("socMed").style.display = "inline";
 		break;
 		
 		case "code":
